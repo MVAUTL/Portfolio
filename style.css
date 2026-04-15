@@ -106,10 +106,11 @@ body {
 }
 
 .profile-img {
-    width: 150px;
     height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: auto;
+    max-width: 250px;
+    border-radius: 16px;
+    object-fit: contain;
     border: 4px solid var(--accent-color);
     box-shadow: 0 0 20px var(--accent-glow);
 }
