@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences - Matteo Vulliez</title>
+    <meta name="description" content="Mes compétences en Génie Électrique et Informatique Industrielle.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Matteo V.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#about">À propos</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 400px; height: 50vh;">
+        <div class="hero-content">
+            <h1>Mes Compétences</h1>
+            <h2>BUT GEII</h2>
+            <p>Concevoir, Vérifier, Réaliser</p>
+        </div>
+        <div class="hero-bg">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+
+            <!-- Competence: Concevoir -->
+            <div class="skill-section" id="concevoir">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <img src="assets/design_skill.png" alt="Concevoir" style="width: 50px; height: 50px;">
+                    <h3 style="margin: 0; font-size: 2rem;">Concevoir</h3>
+                </div>
+                <p class="lead">Définir et concevoir des systèmes électroniques et informatiques répondant à un cahier
+                    des charges.</p>
+                <p>
+                    Cette compétence implique l'analyse des besoins (exigences), la recherche de solutions techniques
+                    (synoptiques, choix de composants) et la validation par simulation.
+                </p>
+                <h4>Exemples de mises en œuvre :</h4>
+                <div class="buttons-container">
+                    <a href="project-kah.html" class="btn secondary-btn">Voir dans Projet KAH (Exigences &
+                        Simulation)</a>
+                    <a href="project-tdb.html" class="btn secondary-btn">Voir dans Projet TDB (Synoptique)</a>
+                </div>
+            </div>
+
+            <!-- Competence: Vérifier -->
+            <div class="skill-section" id="verifier">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <img src="assets/verify_skill.png" alt="Vérifier" style="width: 50px; height: 50px;">
+                    <h3 style="margin: 0; font-size: 2rem;">Vérifier</h3>
+                </div>
+                <p class="lead">Valider les performances et la conformité d'une solution technique.</p>
+                <p>
+                    La vérification passe par des tests unitaires, des mesures instrumentées (oscilloscope, multimètre)
+                    et la correction des non-conformités détectées lors du prototypage.
+                </p>
+                <h4>Exemples de mises en œuvre :</h4>
+                <div class="buttons-container">
+                    <a href="project-kah.html" class="btn secondary-btn">Voir dans Projet KAH (Tests & Validation)</a>
+                </div>
+            </div>
+
+            <!-- Competence: Réaliser -->
+            <div class="skill-section" id="realiser">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <div style="font-size: 2.5rem;">🛠️</div>
+                    <h3 style="margin: 0; font-size: 2rem;">Réaliser</h3>
+                </div>
+                <p class="lead">Fabriquer et intégrer des sous-ensembles électroniques.</p>
+                <p>
+                    Réalisation de PCB (routage, fabrication), soudure de composants (CMS et traversants), et
+                    intégration mécanique.
+                </p>
+                <h4>Exemples de mises en œuvre :</h4>
+                <div class="buttons-container">
+                    <a href="project-kah.html" class="btn secondary-btn">Voir dans Projet KAH (Fabrication PCB)</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <h2>Contact</h2>
+            <p>N'hésitez pas à me contacter.</p>
+            <a href="mailto:matteo.vulliez@etu.u-bordeaux.fr"
+                class="btn secondary-btn">matteo.vulliez@etu.u-bordeaux.fr</a>
+            <p class="copyright">&copy; 2025 Matteo Vulliez. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

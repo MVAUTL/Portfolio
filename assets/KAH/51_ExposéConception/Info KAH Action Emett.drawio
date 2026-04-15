@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 OPR/118.0.0.0" version="26.2.14">
+  <diagram name="Page-1" id="4LBoE07Uu6l0TGyGMYpE">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="E7snQXMojcRipf6RP-MD-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="E7snQXMojcRipf6RP-MD-2" target="E7snQXMojcRipf6RP-MD-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E7snQXMojcRipf6RP-MD-2" value="Précedentes insutructions" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="353" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E7snQXMojcRipf6RP-MD-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="E7snQXMojcRipf6RP-MD-5" target="E7snQXMojcRipf6RP-MD-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E-eKRhZZU-DI5Da1kB2l-2" value="Oui" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" connectable="0" vertex="1" parent="E7snQXMojcRipf6RP-MD-10">
+          <mxGeometry x="-0.2593" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E7snQXMojcRipf6RP-MD-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="E7snQXMojcRipf6RP-MD-5" target="E7snQXMojcRipf6RP-MD-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E-eKRhZZU-DI5Da1kB2l-1" value="Non" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" connectable="0" vertex="1" parent="E7snQXMojcRipf6RP-MD-15">
+          <mxGeometry x="-0.7282" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E7snQXMojcRipf6RP-MD-5" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Si trame NEC précédente&lt;div&gt;=&lt;br&gt;&lt;div&gt;nouvelle trame NEC&amp;nbsp;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="321" y="300" width="185" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="E7snQXMojcRipf6RP-MD-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="E7snQXMojcRipf6RP-MD-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="413" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E7snQXMojcRipf6RP-MD-9" value="Attendre 333ms" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="353" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E7snQXMojcRipf6RP-MD-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="E7snQXMojcRipf6RP-MD-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="413" y="670" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E7snQXMojcRipf6RP-MD-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="E7snQXMojcRipf6RP-MD-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="413.66666666666697" y="800.0000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E7snQXMojcRipf6RP-MD-13" value="Ancienne trame NEC =&amp;nbsp; Nouvelle trame NEC" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="700" width="247" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E7snQXMojcRipf6RP-MD-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="E7snQXMojcRipf6RP-MD-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="413" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E7snQXMojcRipf6RP-MD-16" value="Attendre 108ms" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="537" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E7snQXMojcRipf6RP-MD-21" value="Précedentes insutructions" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="353" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E7snQXMojcRipf6RP-MD-22" value="GenererTrameNEC(NEC_LED_Pin, AdresseNEC, DonneeNEC)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="218" y="610" width="390" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

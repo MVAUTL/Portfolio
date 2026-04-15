@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+.container {
+    display: flex;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.top-bar h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.pump-control {
+    border: 2px solid #007BFF;
+    background-color: #e0f0ff;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.valve {
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33% - 40px);
+    box-sizing: border-box;
+    background-color: #d2f6c0;
+}
+h2, h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.valve button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+}
+.valve input {
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.valve label {
+    display: block;
+    margin: 10px 0 5px;
+}
+.Auto{
+    border: 2px solid #7a7878;
+    padding: 8px;
+    margin: 3px;
+    box-sizing: border-box;
+}
+
+/* Ajoutez ceci à votre fichier style.css */
+.indicator {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.dark-blue {
+    background-color: darkblue;
+}

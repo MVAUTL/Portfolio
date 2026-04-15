@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrosage Automatique - Matteo Vulliez</title>
+    <meta name="description" content="Projet d'Arrosage Automatique en cours de développement.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Matteo V.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#about">À propos</a></li>
+            <li><a href="index.html#skills">Compétences</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="hero"
+        style="height: 60vh; min-height: 400px; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/Arrosage automatique/coffret_clean.png'); background-size: cover; background-position: center;">
+        <div class="hero-content">
+            <h1>Arrosage Automatique</h1>
+            <h2>Projet Personnel</h2>
+            <p>Système automatisé pour la gestion de l'eau avec interface web.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Présentation du Projet</h2>
+            <div class="project-details">
+                <div class="project-info">
+                    <h3>Le Défi</h3>
+                    <p>
+                        L'objectif de ce projet est de concevoir un système d'arrosage automatique intelligent,
+                        contrôlable via une interface web locale.
+                        Il intègre la gestion des pompes, des capteurs, et une planification horaire, le tout piloté par
+                        un microcontrôleur.
+                    </p>
+
+                    <!-- Tabs Navigation -->
+                    <div class="tabs-container">
+                        <div class="tabs-nav">
+                            <button class="tab-btn active" onclick="openTab(event, 'conception')">Conception</button>
+                            <button class="tab-btn" onclick="openTab(event, 'fabrication')">Fabrication</button>
+                            <button class="tab-btn" onclick="openTab(event, 'verification')">Vérification</button>
+                        </div>
+
+                        <!-- Tab: Conception -->
+                        <div id="conception" class="tab-content" style="display: block;">
+                            <h4>Architecture & Interface Web</h4>
+                            <p>
+                                Le système est basé sur un microcontrôleur programmé en C++ (framework
+                                Arduino/PlatformIO).
+                                Il héberge une page web interactive permettant de configurer les plages d'arrosage et
+                                déclencher manuellement les pompes.
+                            </p>
+                            <div class="video-grid">
+                                <div class="video-item">
+                                    <video controls class="responsive-video">
+                                        <source src="assets/Arrosage automatique/Web.mp4" type="video/mp4">
+                                        Votre navigateur ne supporte pas la vidéo.
+                                    </video>
+                                    <p class="caption">Démonstration de l'interface Web en fonctionnement</p>
+                                </div>
+                            </div>
+                            <div style="margin-top: 2rem; text-align: right;">
+                                <button class="btn secondary-btn" onclick="switchToTab('fabrication')">Phase Suivante :
+                                    Fabrication &rarr;</button>
+                            </div>
+                        </div>
+
+                        <!-- Tab: Fabrication -->
+                        <div id="fabrication" class="tab-content">
+                            <h4>Assemblage Matériel</h4>
+                            <p>
+                                Le contrôleur est intégré dans un coffret étanche. Les composants incluent des relais
+                                pour piloter les pompes
+                                et une alimentation dédiée.
+                            </p>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="assets/Arrosage automatique/coffret_clean.png" alt="Coffret finalisé"
+                                        class="responsive-img">
+                                    <p class="caption">Coffret finalisé</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/Arrosage automatique/photo_boite ouvete.jpg"
+                                        alt="Intégration électronique" class="responsive-img">
+                                    <p class="caption">Intégration de l'électronique</p>
+                                </div>
+
+                            </div>
+
+                            <div style="margin-top: 1.5rem;">
+                                <h4>Code Source</h4>
+                                <p>Codes du microcontrôleur et de l'interface web locale.</p>
+                                <div class="downloads-grid" style="grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                                    <a href="assets/Arrosage automatique/Arrosage_autov8/src/main.cpp"
+                                        class="download-card" download>
+                                        <span class="icon">💻</span>
+                                        <div class="meta">
+                                            <span class="filename">main.cpp</span>
+                                            <span class="desc">Microcontrôleur (C++)</span>
+                                        </div>
+                                    </a>
+                                    <a href="assets/Arrosage automatique/Arrosage_autov8/data/index.html"
+                                        class="download-card" download>
+                                        <span class="icon">🌐</span>
+                                        <div class="meta">
+                                            <span class="filename">index.html</span>
+                                            <span class="desc">Interface Web (HTML)</span>
+                                        </div>
+                                    </a>
+                                    <a href="assets/Arrosage automatique/Arrosage_autov8/data/style.css"
+                                        class="download-card" download>
+                                        <span class="icon">🎨</span>
+                                        <div class="meta">
+                                            <span class="filename">style.css</span>
+                                            <span class="desc">Styles Web (CSS)</span>
+                                        </div>
+                                    </a>
+                                    <a href="assets/Arrosage automatique/Arrosage_autov8/data/script.js"
+                                        class="download-card" download>
+                                        <span class="icon">⚡</span>
+                                        <div class="meta">
+                                            <span class="filename">script.js</span>
+                                            <span class="desc">Logique Web (JS)</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div style="margin-top: 2rem; text-align: right;">
+                                <button class="btn secondary-btn" onclick="switchToTab('verification')">Phase Suivante :
+                                    Vérification &rarr;</button>
+                            </div>
+                        </div>
+
+                        <!-- Tab: Verification -->
+                        <div id="verification" class="tab-content">
+                            <h4>Tests et Validation</h4>
+                            <p>
+                                La validation du système en conditions réelles permet de s'assurer de l'étanchéité,
+                                du bon fonctionnement des pompes et de la réactivité de l'interface web.
+                            </p>
+                            <div class="video-grid" style="display: flex; justify-content: center;">
+                                <div class="video-item" style="max-width: 400px; width: 100%;">
+                                    <video controls class="responsive-video">
+                                        <source src="assets/Arrosage automatique/PXL_20251130_144935514.mp4"
+                                            type="video/mp4">
+                                        Votre navigateur ne supporte pas la vidéo.
+                                    </video>
+                                    <p class="caption">Test d'Arrosage global</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center;">
+                <a href="index.html#projects" class="btn primary-btn">Retour aux projets</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <h2>Contact</h2>
+            <p>N'hésitez pas à me contacter pour plus de détails.</p>
+            <a href="mailto:matteo.vulliez@etu.u-bordeaux.fr"
+                class="btn secondary-btn">matteo.vulliez@etu.u-bordeaux.fr</a>
+            <p class="copyright">&copy; 2025 Matteo Vulliez. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

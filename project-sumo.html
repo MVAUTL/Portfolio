@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot SUMO - Matteo Vulliez</title>
+    <meta name="description" content="Projet Robot SUMO en cours de développement.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Matteo V.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#about">À propos</a></li>
+            <li><a href="index.html#skills">Compétences</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="hero"
+        style="height: 60vh; min-height: 400px; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/sumo_project.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-content">
+            <h1>Robot SUMO</h1>
+            <h2>Projet SAE GEII</h2>
+            <p>Conception, fabrication et programmation d'un robot autonome de combat.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Présentation du Projet</h2>
+            <div class="project-details">
+                <div class="project-info">
+                    <h3>Le Défi</h3>
+                    <p>
+                        Dans le cadre de la SAE (Situation d'Apprentissage et d'Évaluation), notre équipe a eu pour
+                        mission de concevoir et réaliser un robot capable de pousser un adversaire hors d'un cercle de
+                        combat (Dohyo), en respectant un cahier des charges strict (poids, dimensions, autonomie).
+                    </p>
+
+                    <!-- Imposed Documents (Always Visible) -->
+                    <h3>Contexte et Contraintes (Imposés)</h3>
+                    <p>Documents fournis par l'équipe pédagogique :</p>
+                    <div class="downloads-grid">
+                        <a href="assets/Sumo/Copy of Reglement Mini-Sumo 2019 v3.pdf" class="download-card" download>
+                            <span class="icon">⚖️</span>
+                            <div class="meta">
+                                <span class="filename">Règlement</span>
+                                <span class="desc">Règles officielles</span>
+                            </div>
+                        </a>
+                        <a href="assets/Sumo/Copy of RMS-CDC v4.1.docx" class="download-card" download>
+                            <span class="icon">📄</span>
+                            <div class="meta">
+                                <span class="filename">Cahier des Charges</span>
+                                <span class="desc">Technique</span>
+                            </div>
+                        </a>
+                        <a href="assets/Sumo/Copy of RMS_PDP v4.0.xlsx" class="download-card" download>
+                            <span class="icon">📅</span>
+                            <div class="meta">
+                                <span class="filename">Planning</span>
+                                <span class="desc">Gantt</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Tabs Navigation -->
+                    <div class="tabs-container">
+                        <div class="tabs-nav">
+                            <button class="tab-btn active" onclick="openTab(event, 'conception')">Conception</button>
+                            <button class="tab-btn" onclick="openTab(event, 'fabrication')">Fabrication</button>
+                            <button class="tab-btn" onclick="openTab(event, 'verification')">Vérification</button>
+                        </div>
+
+                        <!-- Tab: Conception -->
+                        <div id="conception" class="tab-content" style="display: block;">
+                            <div class="tab-header">
+                                <h4>Dossier de Conception</h4>
+                                <a href="assets/Sumo/B2_DDC_EQ21_V3.pdf" class="download-link" download>Télécharger
+                                    PDF</a>
+                            </div>
+                            <div class="pdf-wrapper">
+                                <embed src="assets/Sumo/B2_DDC_EQ21_V3.pdf" type="application/pdf" width="100%"
+                                    height="600px" />
+                            </div>
+
+                            <h4>Schémas et Etudes</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="assets/Sumo/concep/Copy of Dérisquage pont div ref.jpg"
+                                        alt="Dérisquage Pont Diviseur" class="responsive-img">
+                                    <p class="caption">Dérisquage Pont Diviseur</p>
+                                </div>
+                            </div>
+                            <div style="margin-top: 2rem; text-align: right;">
+                                <button class="btn secondary-btn" onclick="switchToTab('fabrication')">Phase Suivante :
+                                    Fabrication &rarr;</button>
+                            </div>
+                        </div>
+
+                        <!-- Tab: Fabrication -->
+                        <div id="fabrication" class="tab-content">
+                            <div class="tab-header">
+                                <h4>Dossier de Fabrication</h4>
+                                <a href="assets/Sumo/B2_DDF_EQ21_V3.pdf" class="download-link" download>Télécharger
+                                    PDF</a>
+                            </div>
+                            <div class="pdf-wrapper">
+                                <embed src="assets/Sumo/B2_DDF_EQ21_V3.pdf" type="application/pdf" width="100%"
+                                    height="600px" />
+                            </div>
+
+                            <h4>PCB et Routage (KiCad)</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="assets/Sumo/fab/Copy of couche_top_3D.jpg" alt="PCB Top 3D"
+                                        class="responsive-img">
+                                    <p class="caption">PCB Top 3D</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/Sumo/fab/Copy of couche_bottom_3D.jpg" alt="PCB Bottom 3D"
+                                        class="responsive-img">
+                                    <p class="caption">PCB Bottom 3D</p>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 1.5rem;">
+                                <h4>Code Source</h4>
+                                <p>Extrait du programme principal (Arduino/C++)</p>
+                                <a href="assets/Sumo/fab/Copy of Programme_RobotSUMO_Lite.ino" class="download-card"
+                                    download>
+                                    <span class="icon">💻</span>
+                                    <div class="meta">
+                                        <span class="filename">Programme_RobotSUMO_Lite.ino</span>
+                                        <span class="desc">Code Source Arduino</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div style="margin-top: 2rem; text-align: right;">
+                                <button class="btn secondary-btn" onclick="switchToTab('verification')">Phase Suivante :
+                                    Vérification &rarr;</button>
+                            </div>
+                        </div>
+
+                        <!-- Tab: Verification -->
+                        <div id="verification" class="tab-content">
+                            <div class="tab-header">
+                                <h4>Dossier de Validation</h4>
+                                <a href="assets/Sumo/B2_DDV_EQ21_V1.pdf" class="download-link" download>Télécharger
+                                    PDF</a>
+                            </div>
+                            <div class="pdf-wrapper">
+                                <embed src="assets/Sumo/B2_DDV_EQ21_V1.pdf" type="application/pdf" width="100%"
+                                    height="600px" />
+                            </div>
+
+                            <h4>Tests Vidéo</h4>
+                            <div class="video-grid">
+                                <div class="video-item">
+                                    <video controls class="responsive-video">
+                                        <source src="assets/Sumo/verif/Copy of Comportement.mp4" type="video/mp4">
+                                        Votre navigateur ne supporte pas la vidéo.
+                                    </video>
+                                    <p class="caption">Test Comportement Global</p>
+                                </div>
+                                <div class="video-item">
+                                    <video controls class="responsive-video">
+                                        <source src="assets/Sumo/verif/Copy of Vidéo_test_EXIG_ADVERSAIRE.mp4"
+                                            type="video/mp4">
+                                        Votre navigateur ne supporte pas la vidéo.
+                                    </video>
+                                    <p class="caption">Détection Adversaire</p>
+                                </div>
+                                <div class="video-item">
+                                    <video controls class="responsive-video">
+                                        <source src="assets/Sumo/verif/Copy of Vidéo_test_EXIG_LUMINOSITE_Normal"
+                                            type="video/mp4">
+                                        Votre navigateur ne supporte pas la vidéo.
+                                    </video>
+                                    <p class="caption">Test Luminosité</p>
+                                </div>
+                            </div>
+
+                            <h4>Photos des Tests</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="assets/Sumo/verif/Copy of Mesure_Autonomie.jpg" alt="Mesure Autonomie"
+                                        class="responsive-img">
+                                    <p class="caption">Mesure d'Autonomie</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center;">
+                <a href="index.html#projects" class="btn primary-btn">Retour aux projets</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <h2>Contact</h2>
+            <p>N'hésitez pas à me contacter pour toute question.</p>
+            <a href="mailto:matteo.vulliez@etu.u-bordeaux.fr"
+                class="btn secondary-btn">matteo.vulliez@etu.u-bordeaux.fr</a>
+            <p class="copyright">&copy; 2025 Matteo Vulliez. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

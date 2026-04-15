@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voile - Matteo Vulliez</title>
+    <meta name="description" content="Pratique de la voile sportive.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Matteo V.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#about">À propos</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="index.html#activities">Activités</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 60vh; min-height: 400px;">
+        <div class="hero-content">
+            <h1>Voile Sportive</h1>
+            <h2>Championnats de France par équipe</h2>
+            <p>Esprit d'équipe, compétition et dépassement de soi.</p>
+        </div>
+        <div class="hero-bg">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Palmarès & Pratique</h2>
+            <div class="about-content" style="text-align: left;">
+                <p>
+                    La voile est pour moi plus qu'un sport, c'est une passion. J'ai eu l'honneur de participer aux <strong>Championnats de France de voile en équipe</strong>. 
+                    Cette expérience m'a appris l'importance de la communication fluide, de la stratégie en temps réel, de la gestion du stress et de l'entraide au sein d'un équipage.
+                </p>
+
+                <div class="image-container" style="background-color: #2a2a2a; border-radius: 12px; height: 400px; display: flex; align-items: center; justify-content: center; margin: 2rem 0;">
+                    <span style="font-size: 2rem; color: #888;">[ Espace pour Photo Voile ]</span>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="index.html#activities" class="btn secondary-btn">Retour aux activités</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <h2>Contact</h2>
+            <p>N'hésitez pas à me contacter.</p>
+            <a href="mailto:matteovulliez@gmail.com" class="btn secondary-btn">matteovulliez@gmail.com</a>
+            <p class="copyright">&copy; 2025 Matteo Vulliez. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

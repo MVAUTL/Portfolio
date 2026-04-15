@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kart à Hélice (KAH) - Matteo Vulliez</title>
+    <meta name="description" content="Détails du projet Kart à Hélice (KAH) réalisé en GEII.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-details ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        .project-details li {
+            margin-bottom: 10px;
+        }
+
+        .doc-list {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Matteo V.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#about">À propos</a></li>
+            <li><a href="index.html#skills">Compétences</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 60vh; min-height: 400px;">
+        <div class="hero-content">
+            <h1>Kart à Hélice (KAH)</h1>
+            <h2>Projet SAE GEII</h2>
+            <p>Conception et réalisation d'un système embarqué complet.</p>
+        </div>
+        <div class="hero-bg">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Présentation du Projet</h2>
+            <div class="project-details">
+                <div class="project-info">
+                    <h3>Le Défi</h3>
+                    <p>
+                        L’entreprise Toy Corporation souhaite développer un kart miniature à hélice, destiné à un usage
+                        intérieur. L’objectif est de proposer un produit grand public, accessible, peu coûteux, facile à
+                        utiliser et à produire en série, tout en respectant les normes de qualité ISO9001.
+                    </p>
+                    <p>
+                        Le système comprend un émetteur (télécommande) et un récepteur (kart) communiquant par
+                        infrarouge.
+                    </p>
+
+                    <!-- Imposed Documents (Always Visible) -->
+                    <h3>Contexte et Contraintes (Imposés)</h3>
+                    <p>Documents de référence du projet :</p>
+                    <div class="downloads-grid">
+                        <a href="assets/KAH/KAH_CDC.docx.pdf" class="download-card" download>
+                            <span class="icon">📄</span>
+                            <div class="meta">
+                                <span class="filename">Cahier des Charges</span>
+                                <span class="desc">Besoins fonctionnels</span>
+                            </div>
+                        </a>
+                        <a href="assets/KAH/planning.pdf" class="download-card" download>
+                            <span class="icon">📅</span>
+                            <div class="meta">
+                                <span class="filename">Planning</span>
+                                <span class="desc">Organisation prévisionnelle</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Tabs Navigation -->
+                    <div class="tabs-container">
+                        <div class="tabs-nav">
+                            <button class="tab-btn active" onclick="openTab(event, 'conception')">Conception</button>
+                            <button class="tab-btn" onclick="openTab(event, 'fabrication')">Fabrication</button>
+                            <button class="tab-btn" onclick="openTab(event, 'verification')">Vérification</button>
+                        </div>
+
+                        <!-- Tab: Conception -->
+                        <div id="conception" class="tab-content" style="display: block;">
+                            <div class="tab-header">
+                                <h4>Dossier de Conception</h4>
+                                <a href="assets/KAH/KAH_DDC_EQ12.docx.pdf" class="download-link" download>Télécharger
+                                    PDF</a>
+                            </div>
+                            <div class="pdf-wrapper">
+                                <embed src="assets/KAH/KAH_DDC_EQ12.docx.pdf" type="application/pdf" width="100%"
+                                    height="600px" />
+                            </div>
+
+                            <h4>Analyse des Exigences</h4>
+                            <p>Décompostion fonctionnelle du récepteur (Acquisition, Traitement, Action, Énergie).</p>
+                            <div class="image-container">
+                                <img src="assets/schemat exg.png" alt="Schéma résumé des exigences"
+                                    class="responsive-img">
+                                <p class="caption">Synoptique des Exigences</p>
+                            </div>
+
+                            <h4>architecture du recepteur</h4>
+                            <div class="image-container">
+                                <img src="assets/KAH/Diagramme d'Architecture Récepteur.png"
+                                    alt="Diagramme d'Architecture" class="responsive-img">
+                                <p class="caption">Diagramme d'Architectur</p>
+                            </div>
+
+                            <h4>Simulation et Dérisquage</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="assets/KAH/Isis_simulation.png" alt="Simulation ISIS"
+                                        class="responsive-img">
+                                    <p class="caption">Simulation ISIS (Validation électronique)</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/KAH/ArduinoBreadboard.jpg" alt="Montage Breadboard"
+                                        class="responsive-img">
+                                    <p class="caption">Prototypage Rapide (Breadboard)</p>
+                                </div>
+                            </div>
+
+                            <h4>Cahier des Charges et Schémas Supplémentaires</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="assets/KAH/CDC.png" alt="Cahier des Charges" class="responsive-img">
+                                    <p class="caption">Cahier des Charges - Exigences globales</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/KAH/CDC_2.png" alt="Cahier des Charges Détail"
+                                        class="responsive-img">
+                                    <p class="caption">Fonction Globale</p>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 2rem; text-align: right;">
+                                <button class="btn secondary-btn" onclick="switchToTab('fabrication')">Phase Suivante :
+                                    Fabrication &rarr;</button>
+                            </div>
+                        </div>
+
+                        <!-- Tab: Fabrication -->
+                        <div id="fabrication" class="tab-content">
+                            <div class="tab-header">
+                                <h4>Dossier de Fabrication</h4>
+                                <a href="assets/KAH/KAH_DDF_RCPT_EQ12.docx.pdf" class="download-link"
+                                    download>Télécharger PDF</a>
+                            </div>
+                            <div class="pdf-wrapper">
+                                <embed src="assets/KAH/KAH_DDF_RCPT_EQ12.docx.pdf" type="application/pdf" width="100%"
+                                    height="600px" />
+                            </div>
+
+                            <h4>Typons et Implantation</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="assets/KAH/top.jpg" alt="Typon Top" class="responsive-img">
+                                    <p class="caption">Typon Face Composants (Top)</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/KAH/botton.jpg" alt="Typon Bottom" class="responsive-img">
+                                    <p class="caption">Typon Face Soudures (Bottom)</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/KAH/percage.jpg" alt="Plan de Perçage" class="responsive-img">
+                                    <p class="caption">Plan de Perçage</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/KAH/implementation.jpg" alt="Plan d'Implantation"
+                                        class="responsive-img">
+                                    <p class="caption">Implantation des Composants</p>
+                                </div>
+                            </div>
+
+                            <h4>Cartes Électroniques Finales</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="assets/KAH/photo carte emetrice souder.png" alt="Carte Émettrice Soudée"
+                                        class="responsive-img">
+                                    <p class="caption">Carte Émettrice Soudée</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/KAH/carte recpetrice soude.png" alt="Carte Réceptrice Soudée"
+                                        class="responsive-img">
+                                    <p class="caption">Carte Réceptrice Soudée</p>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 2rem; text-align: right;">
+                                <button class="btn secondary-btn" onclick="switchToTab('verification')">Phase Suivante :
+                                    Vérification &rarr;</button>
+                            </div>
+                        </div>
+
+                        <!-- Tab: Verification -->
+                        <div id="verification" class="tab-content">
+                            <div class="tab-header">
+                                <h4>Dossier de Vérification</h4>
+                                <a href="assets/KAH/KAH_DDV_EQ12.docx.pdf" class="download-link" download>Télécharger
+                                    PDF</a>
+                            </div>
+                            <div class="pdf-wrapper">
+                                <embed src="assets/KAH/KAH_DDV_EQ12.docx.pdf" type="application/pdf" width="100%"
+                                    height="600px" />
+                            </div>
+
+                            <h4>Tests et Mesures</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="assets/KAH/ociloscope.jpg" alt="Mesures Oscilloscope"
+                                        class="responsive-img">
+                                    <p class="caption">Validation des signaux (Oscilloscope)</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/KAH/pied à coulisse.jpg" alt="Mesures Dimensionnelles"
+                                        class="responsive-img">
+                                    <p class="caption">Vérification Dimensionnelle</p>
+                                </div>
+                            </div>
+
+                            <h4>Schémas de Test</h4>
+                            <div class="image-container">
+                                <img src="assets/KAH/Schamat verif k.jpg" alt="Schéma de vérification"
+                                    class="responsive-img">
+                                <p class="caption">Protocole de test du klaxon</p>
+                            </div>
+
+                            <h4>Amélioration Continue (Non-Conformité)</h4>
+                            <p>Adaptation technique pour résoudre un problème d'encombrement des LED IR.</p>
+                            <div class="image-container">
+                                <img src="assets/KAH/LED_IR.png" alt="Solution LED IR" class="responsive-img"
+                                    style="max-width: 400px;">
+                                <p class="caption">Technique de pliage des composants</p>
+                            </div>
+
+                            <h4>Démonstration en Condition Réelle</h4>
+                            <div class="video-container" style="text-align: center; margin-top: 20px;">
+                                <video controls
+                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <source src="assets/KAH/ConcoursPilotageKartAHélice.mp4" type="video/mp4">
+                                    Votre navigateur ne supporte pas la balise vidéo.
+                                </video>
+                                <p class="caption">Concours de Pilotage Kart À Hélice</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center;">
+                <a href="index.html#projects" class="btn primary-btn">Retour aux projets</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <h2>Contact</h2>
+            <p>N'hésitez pas à me contacter pour plus de détails sur ce projet.</p>
+            <a href="mailto:matteo.vulliez@etu.u-bordeaux.fr"
+                class="btn secondary-btn">matteo.vulliez@etu.u-bordeaux.fr</a>
+            <p class="copyright">&copy; 2025 Matteo Vulliez. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

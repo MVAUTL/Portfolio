@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="icone.jpg">
+    <link rel="icon" href="icone.jpg">
+    <link rel="shortcut icon" type="image/jpg" href="icone.jpg"/>
+    <script type="text/javascript" src="script.js"></script>
+    <title>Contrôle des Électrovannes </title>
+</head>
+<body>
+    <div class="top-bar">
+    <h1>Contrôle des Électrovannes</h1>
+    <div class="pump-control">
+        <table>
+            <tr>
+                <th><h3>Pompe</h3></th>
+                <th><button onclick="controlValve('6', 'on')">On</button></th>
+                <th><button onclick="controlValve('6', 'off')">Off</button></th>
+                <th>
+                    <div class="status">
+                        <span id="status6" class="indicator red"></span>
+                    </div>
+                </th>
+            </tr>
+        </table>
+    </div>
+</div>
+
+    <div class="container">
+        <!-- Électrovanne 1 -->
+        <div class="valve">
+            <table>
+                <th><h2>Van 01</h2></th>
+                <th>
+                    <div class="status">
+                        <span id="status1" class="indicator red"></span>
+                    </div>
+                </th>
+            </table>
+            <h3>Pergola</h3>
+            <table>
+                <th><button onclick="controlValve('1', 'on')">On</button></th>
+                <th><button onclick="controlValve('1', 'off')">Off</button></th>
+            </table>
+            <label for="time1">Temps d'arrosage (minutes):</label>
+            <table>
+                <th><input type="number" id="time1" min="1" max="60" value="15"></th>
+                <th><button onclick="controlValveWithTimer('1')">Start</button></th>
+            </table>
+            <!--
+            <div class="Auto">
+                <table>
+                    <th><button onclick="setAutoMode('1')">Activer mode Auto</button></th>
+                    <th>
+                        <div class="auto-status">
+                            <span id="autoStatus1" class="indicator gray"></span>
+                        </div>
+                    </th>
+                </table>
+                <label for="start1">Heure de départ (Auto):</label>
+                <input type="time" id="start1" value="22:15">
+                <label for="duration1">Durée (Auto) (minutes):</label>
+                <input type="number" id="duration1" min="1" max="60" value="15">
+            </div>-->
+        </div>
+
+        <!-- Électrovanne 2 -->
+        <div class="valve">
+            <table>
+                <th><h2>Van 02</h2></th>
+                <th>
+                    <div class="status">
+                        <span id="status2" class="indicator red"></span>
+                    </div>
+                </th>
+            </table>
+            <h3>Coté Jardin</h3>
+            <table>
+                <th><button onclick="controlValve('2', 'on')">On</button></th>
+                <th><button onclick="controlValve('2', 'off')">Off</button></th>
+            </table>
+            <label for="time2">Temps d'arrosage (minutes):</label>
+            <table>
+                <th><input type="number" id="time2" min="1" max="60" value="15"></th>
+                <th><button onclick="controlValveWithTimer('2')">Start</button></th>
+            </table>
+            <!--
+            <div class="Auto">
+                <table>
+                    <th><button onclick="setAutoMode('2')">Activer mode Auto</button></th>
+                    <th>
+                        <div class="auto-status">
+                            <span id="autoStatus2" class="indicator gray"></span>
+                        </div>
+                    </th>
+                </table>
+                <label for="start2">Heure de départ (Auto):</label>
+                <input type="time" id="start2">
+                <label for="duration2">Durée (Auto) (minutes):</label>
+                <input type="number" id="duration2" min="1" max="60" value="15">
+            </div>-->
+        </div>
+
+        <!-- Électrovanne 3 -->
+        <div class="valve">
+            <table>
+                <th><h2>Van 03</h2></th>
+                <th>
+                    <div class="status">
+                        <span id="status3" class="indicator red"></span>
+                    </div>
+                </th>
+            </table>
+            <h3>Jardin Devant</h3>
+            <table>
+                <th><button onclick="controlValve('3', 'on')">On</button></th>
+                <th><button onclick="controlValve('3', 'off')">Off</button></th>
+            </table>
+            <label for="time3">Temps d'arrosage (minutes):</label>
+            <table>
+                <th><input type="number" id="time3" min="1" max="60" value="15"></th>
+                <th><button onclick="controlValveWithTimer('3')">Start</button></th>
+            </table>
+            <!--
+            <div class="Auto">
+                <table>
+                    <th><button onclick="setAutoMode('3')">Activer mode Auto</button></th>
+                    <th>
+                        <div class="auto-status">
+                            <span id="autoStatus3" class="indicator gray"></span>
+                        </div>
+                    </th>
+                </table>
+                <label for="start3">Heure de départ (Auto):</label>
+                <input type="time" id="start3">
+                <label for="duration3">Durée (Auto) (minutes):</label>
+                <input type="number" id="duration3" min="1" max="60" value="15">
+            </div>-->
+        </div>
+
+        <!-- Électrovanne 4 -->
+        <div class="valve">
+            <table>
+                <th><h2>Van 04</h2></th>
+                <th>
+                    <div class="status">
+                        <span id="status4" class="indicator red"></span>
+                    </div>
+                </th>
+            </table>
+            <h3>Piscine</h3>
+            <table>
+                <th><button onclick="controlValve('4', 'on')">On</button></th>
+                <th><button onclick="controlValve('4', 'off')">Off</button></th>
+            </table>
+            <label for="time4">Temps d'arrosage (minutes):</label>
+            <table>
+                <th><input type="number" id="time4" min="1" max="60" value="15"></th>
+                <th><button onclick="controlValveWithTimer('4')">Start</button></th>
+            </table>
+            <!--
+            <div class="Auto">
+                <table>
+                    <th><button onclick="setAutoMode('4')">Activer mode Auto</button></th>
+                    <th>
+                        <div class="auto-status">
+                            <span id="autoStatus4" class="indicator gray"></span>
+                        </div>
+                    </th>
+                </table>
+                <label for="start4">Heure de départ (Auto):</label>
+                <input type="time" id="start4">
+                <label for="duration4">Durée (Auto) (minutes):</label>
+                <input type="number" id="duration4" min="1" max="60" value="15">
+            </div>-->
+        </div>
+
+        <!-- Électrovanne 5 -->
+        <div class="valve">
+            <table>
+                <th><h2>Van 05</h2></th>
+                <th>
+                    <div class="status">
+                        <span id="status5" class="indicator red"></span>
+                    </div>
+                </th>
+            </table>
+            <h3>Gouteur</h3>
+            <table>
+                <th><button onclick="controlValve('5', 'on')">On</button></th>
+                <th><button onclick="controlValve('5', 'off')">Off</button></th>
+            </table>
+            <label for="time5">Temps d'arrosage (minutes):</label>
+            <table>
+                <th><input type="number" id="time5" min="1" max="60" value="15"></th>
+                <th><button onclick="controlValveWithTimer('5')">Start</button></th>
+            </table>
+            <!--
+            <div class="Auto">
+                <table>
+                    <th><button onclick="setAutoMode('5')">Activer mode Auto</button></th>
+                    <th>
+                        <div class="auto-status">
+                            <span id="autoStatus5" class="indicator gray"></span>
+                        </div>
+                    </th>
+                </table>
+                <label for="start5">Heure de départ (Auto):</label>
+                <input type="time" id="start5">
+                <label for="duration5">Durée (Auto) (minutes):</label>
+                <input type="number" id="duration5" min="1" max="60" value="15">
+            </div>-->
+        </div>
+        
+    </div>
+</body>
+</html>

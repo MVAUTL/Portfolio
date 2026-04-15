@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matteo Vulliez - Portfolio</title>
+    <meta name="description"
+        content="Portfolio de Matteo Vulliez, étudiant en GEII passionné par la robotique et l'électronique.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Matteo V.</div>
+        <ul class="nav-links">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#formations">Parcours</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#activities">Activités</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="profile-img-container">
+                <img src="assets/profile_icon.jpg" alt="Matteo Vulliez" class="profile-img">
+            </div>
+            <h1>Matteo Vulliez</h1>
+            <h2>Génie Electrique et Informatique Industrielle</h2>
+            <p>Passionné par la robotique, l'électronique et l'automatisation.</p>
+            <div style="margin-top: 2rem;">
+                <a href="#projects" class="btn primary-btn">Voir mes projets</a>
+                <a href="CV.png" target="_blank" class="btn secondary-btn" style="margin-left: 10px;">Mon CV</a>
+            </div>
+        </div>
+        <div class="hero-bg">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <p>
+                    Étudiant en 1ère année de <strong>Génie Electrique et Informatique Industrielle (GEII)</strong> à
+                    l'IUT de Bordeaux.
+                </p>
+                <p>
+                    Passionné par la <strong>robotique</strong>, l’<strong>électronique</strong>, la programmation
+                    embarquée et l’automatisation, j’ai participé à plusieurs compétitions, comme la
+                    <strong>RoboCup</strong>, avec un intérêt particulier pour la conception de systèmes mécatroniques.
+                </p>
+                <p>
+                    Au sein de l’association de robotique <strong>NAMeC</strong>, je suis en charge de la réalisation de
+                    la partie électronique. Je travaille régulièrement avec des outils de CAO, des machines CNC, des
+                    imprimantes 3D, et je développe sur Arduino et Raspberry Pi.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="formations" class="section dark-bg">
+        <div class="container">
+            <h2 class="section-title">Parcours & Formations</h2>
+            <div class="formations-list" style="max-width: 800px; margin: 0 auto; text-align: left;">
+                <div class="formation-item" style="margin-bottom: 2rem; border-left: 3px solid #ff4d4d; padding-left: 1.5rem;">
+                    <h3>BUT Génie Électrique et Informatique Industrielle</h3>
+                    <p style="color: #aaa; font-weight: 600;">2024 - 2027 | IUT de Bordeaux</p>
+                    <p>Spécialité : Électronique et Systèmes Embarqués. Classé 3ᵉ sur 80.</p>
+                </div>
+                <div class="formation-item" style="margin-bottom: 2rem; border-left: 3px solid #ff4d4d; padding-left: 1.5rem;">
+                    <h3>Diplôme Universitaire en Intelligence Artificielle</h3>
+                    <p style="color: #aaa; font-weight: 600;">2024 - 2026</p>
+                    <p>Formation complémentaire appliquée à l'IA et au machine learning.</p>
+                </div>
+                <div class="formation-item" style="margin-bottom: 2rem; border-left: 3px solid #4d4dff; padding-left: 1.5rem;">
+                    <h3>Baccalauréat Technologique STI2D</h3>
+                    <p style="color: #aaa; font-weight: 600;">2021 - 2024 | Lycée de la Mer, Gujan-Mestras</p>
+                    <p>Mention Très Bien.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Expériences Professionnelles</h2>
+            <div class="projects-grid">
+                <a href="experience-japon.html" class="project-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="project-image">
+                        <div style="height: 200px; background-color: #f4f4f4; display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                            🇯🇵
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Stage International</span>
+                        <h3>Laboratoire de Robotique au Japon</h3>
+                        <p>Immersion au sein d'un laboratoire de recherche japonais spécialisé en robotique.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section dark-bg">
+        <div class="container">
+            <h2 class="section-title">Compétences</h2>
+            <div class="skills-grid">
+                <a href="competences.html#concevoir" class="skill-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <img src="assets/design_skill.png" alt="Concevoir" class="skill-icon">
+                    <h3>Concevoir</h3>
+                    <p>Développement de systèmes électroniques et mécaniques.</p>
+                </a>
+
+                <a href="competences.html#verifier" class="skill-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <img src="assets/verify_skill.png" alt="Vérifier" class="skill-icon">
+                    <h3>Vérifier</h3>
+                    <p>Test et validation des solutions techniques.</p>
+                </a>
+
+                <a href="competences.html#realiser" class="skill-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="icon-placeholder">🛠️</div>
+                    <h3>Réaliser</h3>
+                    <p>Fabrication et intégration de prototypes.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">
+                <!-- SAE GEII -->
+                <a href="project-kah.html" class="project-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="project-image">
+                        <img src="assets/kah_project.jpg" alt="Kart à hélice">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">SAE GEII</span>
+                        <h3>Kart à Hélice (KAH)</h3>
+                        <p>Conception d'un kart miniature piloté par infrarouge pour Toy Corporation.</p>
+                    </div>
+                </a>
+
+                <a href="project-tdb.html" class="project-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="project-image">
+                        <img src="assets/tdb_project.jpg" alt="Thermomètre">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">SAE GEII</span>
+                        <h3>Thermomètre (TDB)</h3>
+                        <p>Réalisation d'un système de mesure de température.</p>
+                    </div>
+                </a>
+
+                <a href="project-sumo.html" class="project-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="project-image">
+                        <img src="assets/sumo_project.jpg" alt="Robot Sumo">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">SAE GEII</span>
+                        <h3>Robot SUMO</h3>
+                        <p>Robot autonome combattant conçu pour la compétition.</p>
+                    </div>
+                </a>
+
+                <!-- Projet Chasse aux Balises -->
+                <a href="project-chasse-balises.html" class="project-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="project-image">
+                        <img src="Chasse au ballise/antenne hb9CV.jpg" alt="Chasse aux balises">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Ensemble PV</span>
+                        <h3>Chasse aux Balises</h3>
+                        <p>Fabrication d'une antenne 144 MHz pour trouver des balises sur le campus.</p>
+                    </div>
+                </a>
+
+                <!-- Project Perso -->
+                <a href="project-watering.html" class="project-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <!-- Assuming watering.png is the image for this -->
+                    <div class="project-image">
+                        <img src="assets/watering.png" alt="Arrosage Automatique">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Projet Perso</span>
+                        <h3>Arrosage Automatique</h3>
+                        <p>Système automatisé pour la gestion de l'eau.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" class="section dark-bg">
+        <div class="container">
+            <h2 class="section-title">Centres d'intérêts & Associatif</h2>
+            <div class="projects-grid">
+                <!-- Secourisme -->
+                <a href="activite-secourisme.html" class="project-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="project-image">
+                        <!-- Add a placeholder or an icon if no image -->
+                        <div style="height: 200px; background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🚑
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Secourisme</span>
+                        <h3>Sauveteur (BNSSA/PSE1)</h3>
+                        <p>Formation et pratique du secourisme.</p>
+                    </div>
+                </a>
+
+                <!-- Plongée -->
+                <a href="activite-plongee.html" class="project-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="project-image">
+                        <div style="height: 200px; background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🤿
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Sport</span>
+                        <h3>Plongée Sous-Marine</h3>
+                        <p>Certifié Niveau 1.</p>
+                    </div>
+                </a>
+
+                <!-- Voile -->
+                <a href="activite-voile.html" class="project-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="project-image">
+                        <div style="height: 200px; background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            ⛵
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Sport</span>
+                        <h3>Voile</h3>
+                        <p>Participation aux Championnats de France par équipe.</p>
+                    </div>
+                </a>
+                
+                <!-- Tennis -->
+                <a href="activite-tennis.html" class="project-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="project-image">
+                        <div style="height: 200px; background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🎾
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Sport</span>
+                        <h3>Tennis</h3>
+                        <p>Pratique régulière du tennis.</p>
+                    </div>
+                </a>
+
+                <!-- Associatif Robotique -->
+                <a href="activite-robotique.html" class="project-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="project-image">
+                        <div style="height: 200px; background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🤖
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Associatif</span>
+                        <h3>Associations Robotique</h3>
+                        <p>Trésorier NAMeC (RoboCup) & Créateur d'un club collège.</p>
+                    </div>
+                </a>
+                
+                <!-- Permis -->
+                <a href="activite-permis.html" class="project-card"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="project-image">
+                        <div style="height: 200px; background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🏍️
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Permis</span>
+                        <h3>Bateau, Remorque, Moto</h3>
+                        <p>Permis Bateau, Remorque et Moto A2.</p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <h2>Contact</h2>
+            <p>N'hésitez pas à me contacter pour toute opportunité ou collaboration.</p>
+            <a href="mailto:matteo.vulliez@etu.u-bordeaux.fr"
+                class="btn secondary-btn">matteo.vulliez@etu.u-bordeaux.fr</a>
+            <div class="socials">
+                <!-- Add social links if available -->
+            </div>
+            <p class="copyright">&copy; 2025 Matteo Vulliez. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

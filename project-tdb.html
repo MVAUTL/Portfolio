@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermomètre (TDB) - Matteo Vulliez</title>
+    <meta name="description" content="Projet Thermomètre (TDB) en cours de développement.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Matteo V.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#about">À propos</a></li>
+            <li><a href="index.html#skills">Compétences</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 60vh; min-height: 400px;">
+        <div class="hero-content">
+            <h1>Thermomètre (TDB)</h1>
+            <h2>Projet SAE GEII</h2>
+            <p>Système de mesure de température.</p>
+        </div>
+        <div class="hero-bg">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">En Développement</h2>
+            <div class="about-content" style="text-align: left;">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Conception du Système</h3>
+                <p>
+                    Pour répondre aux exigences du thermomètre, nous avons utilisé une approche fonctionnelle basée sur
+                    un synoptique à 4 blocs : Acquisition, Traitement, Action et Énergie.
+                </p>
+                <p>
+                    Ce synoptique permet de structurer la recherche de solutions techniques (électroniques et
+                    informatiques) pour chaque fonction.
+                </p>
+
+                <div class="image-container">
+                    <img src="assets/TDB/Synoptique.png" alt="Synoptique TDB" class="responsive-img">
+                    <p class="caption">Synoptique utilisé pour la conception du Thermomètre</p>
+                </div>
+
+                <div style="text-align: center; margin: 3rem 0;">
+                    <a href="assets/TDB/Rapport_SAE_TDB.pdf" target="_blank" class="btn primary-btn">Voir le Rapport
+                        Complet (PDF)</a>
+                </div>
+
+                <div style="text-align: center;">
+                    <a href="index.html#projects" class="btn secondary-btn">Retour aux projets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <h2>Contact</h2>
+            <p>N'hésitez pas à me contacter pour toute question sur ce projet.</p>
+            <a href="mailto:matteo.vulliez@etu.u-bordeaux.fr"
+                class="btn secondary-btn">matteo.vulliez@etu.u-bordeaux.fr</a>
+            <p class="copyright">&copy; 2025 Matteo Vulliez. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
