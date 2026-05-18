@@ -29,15 +29,15 @@
         </div>
     </nav>
 
-    <header class="hero" style="height: 60vh; min-height: 400px; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/images/projects/robocup/robocup-hero.jpg'); background-size: cover; background-position: center;">
-        <div class="hero-content" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; text-align: left; padding: 2rem; max-width: 1000px; width: 100%;">
+    <header class="hero" style="height: 60vh; min-height: 400px; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/images/projects/robocup/baniere_SSL.png'); background-size: cover; background-position: center;">
+        <div class="hero-content" style="position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; text-align: left; padding: 2rem; max-width: 1000px; width: 100%;">
             <div style="flex: 1; min-width: 300px;">
                 <h1 style="margin-bottom: 0.5rem;">Projet RoboCup</h1>
                 <h2 style="margin-bottom: 1rem;">Projet Personnel / Associatif</h2>
-                <p>Développement de robots autonomes pour les ligues SSL et RoboCup Junior (RSK).</p>
+                <p>Mon parcours RoboCup : compétiteur, développeur et arbitre international.</p>
             </div>
             <div style="flex-shrink: 0;">
-                <img src="../../assets/images/projects/robocup/robocup-hero.jpg" alt="RoboCup Hero" style="max-height: 250px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <img src="../../assets/images/projects/robocup/robocup logo.jpg" alt="Logo RoboCup" style="max-height: 200px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); background: white; padding: 10px;">
             </div>
         </div>
     </header>
@@ -49,45 +49,107 @@
             <div class="project-details">
                 <div class="project-info">
                     <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-                        La <strong>RoboCup</strong> est une compétition internationale de robotique visant à promouvoir la recherche en intelligence artificielle et en robotique intelligente. Mon implication s'articule autour de deux ligues principales : la <strong>Small Size League (SSL)</strong> et la ligue <strong>RoboCup Junior RSK/SCT</strong>.
+                        La <strong>RoboCup</strong> est une compétition internationale de robotique visant à promouvoir la recherche en intelligence artificielle et en robotique intelligente. Mon implication couvre plusieurs facettes : participation en tant que compétiteur dans les ligues <strong>RSK/SCT</strong> et <strong>SSL</strong>, prise en main du robot <strong>NAO</strong>, ainsi qu'<strong>arbitrage international</strong> en RoboCup Junior.
                     </p>
 
-                    <!-- LIGUE SSL -->
+                    <!-- 1. LIGUE RSK / SCT -->
                     <div style="margin-bottom: 4rem; background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05);">
                         <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: center;">
                             <div style="flex: 1; min-width: 300px;">
-                                <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 1rem;">Ligue SSL (Small Size League)</h3>
+                                <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 1rem;">🥇 Ligue Junior RSK / SCT</h3>
                                 <p>
-                                    La ligue SSL se concentre sur le jeu d'équipe de robots miniatures hautement dynamiques dans un environnement contrôlé par une vision globale. Les défis majeurs incluent le contrôle de moteurs omnidirectionnels, la prédiction des trajectoires, et la communication à faible latence.
+                                    J'ai participé pendant trois ans à cette ligue Junior. Le projet s'appuie sur <strong>RSK</strong> (<em>Robot Soccer Kit</em>), le kit de robots utilisé pour jouer des matchs de football robotique. La compétition s'appelle <strong>SCT</strong> (<em>Soccer Cam Track</em>) : elle demande de programmer en Python les stratégies des robots, leurs déplacements et leur comportement pendant un match.
                                 </p>
                                 <ul style="list-style: none; padding: 0; margin-top: 1rem;">
-                                    <li style="margin-bottom: 0.5rem;">✔️ <strong>Mécanique :</strong> Base holonome (4 roues omnidirectionnelles).</li>
-                                    <li style="margin-bottom: 0.5rem;">✔️ <strong>Électronique :</strong> Conception de la carte de contrôle principale.</li>
-                                    <li>✔️ <strong>Informatique :</strong> Contrôle moteur et système de frappe.</li>
+                                    <li style="margin-bottom: 0.5rem;">✔️ <strong>Programmation Python :</strong> création de stratégies avec l'API fournie par RSK.</li>
+                                    <li style="margin-bottom: 0.5rem;">✔️ <strong>Déplacement autonome :</strong> gestion des trajectoires, des obstacles et des joueurs adverses.</li>
+                                    <li style="margin-bottom: 0.5rem;">✔️ <strong>Rôles des robots :</strong> programmation d'un attaquant et d'un défenseur avec des comportements différents.</li>
+                                    <li style="margin-bottom: 0.5rem;">✔️ <strong>Coordination d'équipe :</strong> placement des robots, passes et réactions selon l'état du match.</li>
+                                    <li>✔️ <strong>Compétition SCT :</strong> participation aux matchs de football robotique en ligue Junior.</li>
                                 </ul>
+                                <a href="https://robot-soccer-kit.github.io/" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1.2rem; background: var(--accent-color); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: opacity 0.2s;">📄 Documentation RSK</a>
+                                <a href="https://www.youtube.com/watch?v=4NFXbaom7YQ" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 1rem; margin-left: 0.5rem; padding: 0.5rem 1.2rem; background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: opacity 0.2s;">▶️ Vidéo de présentation</a>
                             </div>
                             <div style="flex-shrink: 0; text-align: center;">
-                                <img src="../../assets/images/projects/robocup/robocup-ssl.jpg" alt="RoboCup SSL" style="max-height: 250px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                                <img src="../../assets/images/projects/robocup/RSK Robots.jpg" alt="RSK Robots" style="max-height: 250px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
                             </div>
                         </div>
                     </div>
 
-                    <!-- LIGUE RSK -->
-                    <div style="margin-bottom: 2rem; background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05);">
+                    <!-- 2. NAO CHALLENGE -->
+                    <div style="margin-bottom: 4rem; background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05);">
                         <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: center; flex-direction: row-reverse;">
                             <div style="flex: 1; min-width: 300px;">
-                                <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 1rem;">Ligue Junior RSK / SCT</h3>
+                                <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 1rem;">🤖 NAO Challenge</h3>
                                 <p>
-                                    La ligue Junior est idéale pour introduire des concepts avancés d'intelligence artificielle via l'environnement de simulation <strong>RSK</strong>. Ce projet implique l'écriture de stratégies d'équipe et d'algorithmes de prise de décision testés dans un environnement virtuel robuste.
+                                    Le <strong>NAO Challenge</strong> est un défi de prise en main du robot humanoïde <strong>NAO</strong> (SoftBank Robotics). Ce challenge permet de se familiariser avec la programmation d'un robot humanoïde à travers différentes épreuves ludiques et techniques : marche, interaction homme-robot, et chorégraphies programmées.
                                 </p>
                                 <ul style="list-style: none; padding: 0; margin-top: 1rem;">
-                                    <li style="margin-bottom: 0.5rem;">✔️ <strong>Simulation :</strong> Environnement RSK/SCT.</li>
-                                    <li style="margin-bottom: 0.5rem;">✔️ <strong>Stratégie :</strong> Développement d'IA pour le positionnement sur le terrain.</li>
-                                    <li>✔️ <strong>Test :</strong> Évaluation des performances avant déploiement matériel.</li>
+                                    <li style="margin-bottom: 0.5rem;">✔️ <strong>Programmation :</strong> Développement de comportements sur le robot NAO.</li>
+
+                                    <li style="margin-bottom: 0.5rem;">✔️ <strong>Mouvement :</strong> Programmation de la marche et de chorégraphies.</li>
+                                    <li>✔️ <strong>Découverte :</strong> Prise en main complète d'un robot humanoïde avancé.</li>
                                 </ul>
                             </div>
                             <div style="flex-shrink: 0; text-align: center;">
-                                <img src="../../assets/images/projects/robocup/robocup-rsk.jpg" alt="RoboCup Junior RSK" style="max-height: 250px; border-radius: 10px; background: white; padding: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                                <img src="../../assets/images/projects/robocup/nao-challenge.png" alt="NAO Challenge" style="max-height: 250px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. ARBITRAGE ROBOCUP JUNIOR -->
+                    <div style="margin-bottom: 4rem; background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05);">
+                        <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: center;">
+                            <div style="flex: 1; min-width: 300px;">
+                                <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 1rem;">⚖️ Arbitrage RoboCup Junior</h3>
+                                <p>
+                                    En parallèle de ma participation en tant que compétiteur, j'ai eu l'opportunité d'<strong>arbitrer des compétitions RoboCup Junior</strong> sur la ligne <strong>SCT (Soccer Cam Track)</strong> à différents niveaux, de l'échelon académique jusqu'à l'international.
+                                </p>
+                                <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem;">
+                                    <div style="background: rgba(255,255,255,0.05); padding: 1rem 1.5rem; border-radius: 8px; flex: 1; min-width: 200px; border-left: 3px solid var(--accent-color);">
+                                        <strong style="color: var(--accent-color);">🏫 Académique</strong>
+                                        <p style="margin-top: 0.5rem; font-size: 0.95rem;">Arbitrage des qualifications académiques régionales de la ligne SCT.</p>
+                                    </div>
+                                    <div style="background: rgba(255,255,255,0.05); padding: 1rem 1.5rem; border-radius: 8px; flex: 1; min-width: 200px; border-left: 3px solid #ffd700;">
+                                        <strong style="color: #ffd700;">🇫🇷 National</strong>
+                                        <p style="margin-top: 0.5rem; font-size: 0.95rem;">Arbitrage de la compétition nationale RoboCup Junior France.</p>
+                                    </div>
+                                    <div style="background: rgba(255,255,255,0.05); padding: 1rem 1.5rem; border-radius: 8px; flex: 1; min-width: 200px; border-left: 3px solid #00bfff;">
+                                        <strong style="color: #00bfff;">🇪🇺 Europe — Bari, Italie</strong>
+                                        <p style="margin-top: 0.5rem; font-size: 0.95rem;">Arbitrage lors de la RoboCup Junior européenne à Bari, en Italie 🇮🇹.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex-shrink: 0; text-align: center;">
+                                <img src="../../assets/images/projects/robocup/robocup-arbitrage.png" alt="Arbitrage RoboCup Junior" style="max-height: 250px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. ROBOCUP SSL NAMEC -->
+                    <div style="margin-bottom: 2rem; background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05);">
+                        <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: center; flex-direction: row-reverse;">
+                            <div style="flex: 1; min-width: 300px;">
+                                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">
+                                    <a href="../activities/robotique.html" style="color: var(--accent-color); text-decoration: none;">⚽ RoboCup SSL — NAMec</a>
+                                </h3>
+                                <p>
+                                    La <strong>Small Size League (SSL)</strong> est la ligue de la <strong>RoboCup Major</strong> dédiée au football robotique. Au sein de l'équipe <strong>NAMec</strong>, je participe au développement de robots capables de jouer un match de football en autonomie.
+                                </p>
+                                <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                                    <li style="margin-bottom: 0.5rem;">✔️ <strong>Mécanique :</strong> Base holonome (4 roues omnidirectionnelles).</li>
+                                    <li style="margin-bottom: 0.5rem;">✔️ <strong>Électronique :</strong> Conception de la carte de contrôle principale.</li>
+                                    <li style="margin-bottom: 0.5rem;">✔️ <strong>Informatique :</strong> Contrôle moteur et système de frappe.</li>
+                                    <li>✔️ <strong>Équipe NAMec :</strong> Collaboration au sein d'une équipe de recherche et développement.</li>
+                                </ul>
+                                <a href="../activities/robotique.html" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem; padding: 0.8rem 1.2rem; background: rgba(56, 189, 248, 0.12); color: var(--accent-color); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 8px; text-decoration: none; font-weight: 700;">
+                                    Continuer la lecture sur mon engagement en robotique →
+                                </a>
+                            </div>
+                            <div style="flex-shrink: 0; text-align: center;">
+                                <a href="../activities/robotique.html" style="display: inline-block;">
+                                    <img src="../../assets/images/projects/robocup/robocup-ssl-namec.png" alt="RoboCup SSL NAMec" style="max-height: 250px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); cursor: pointer;">
+                                </a>
                             </div>
                         </div>
                     </div>
