@@ -1,4 +1,5 @@
 *.mp4
+!assets/images/experiences/tsukuba/video_pick_and_place.mp4
 *.MOV
 *.avi
 *.mkv

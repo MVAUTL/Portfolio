@@ -296,6 +296,30 @@ body {
     order: 6;
 }
 
+.activity-order-1 {
+    order: 1;
+}
+
+.activity-order-2 {
+    order: 2;
+}
+
+.activity-order-3 {
+    order: 3;
+}
+
+.activity-order-4 {
+    order: 4;
+}
+
+.activity-order-5 {
+    order: 5;
+}
+
+.activity-order-6 {
+    order: 6;
+}
+
 .project-featured {
     border-color: rgba(212, 175, 55, 0.7);
     box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.18), 0 12px 30px rgba(212, 175, 55, 0.12);
