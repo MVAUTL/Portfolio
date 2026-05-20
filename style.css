@@ -699,6 +699,30 @@ footer {
     margin: 2rem 0;
 }
 
+.sumo-verification-videos {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(180px, 0.45fr);
+    gap: 1.5rem;
+    align-items: stretch;
+    margin: 2rem 0;
+}
+
+.sumo-video-column {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.sumo-verification-videos .responsive-video {
+    height: 240px;
+    object-fit: contain;
+    background: #000;
+}
+
+.sumo-video-vertical .responsive-video {
+    height: 100%;
+    min-height: 520px;
+}
+
 .video-item {
     background: rgba(0, 0, 0, 0.3);
     padding: 10px;
@@ -708,4 +732,16 @@ footer {
 .responsive-video {
     width: 100%;
     border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .sumo-verification-videos {
+        grid-template-columns: 1fr;
+    }
+
+    .sumo-video-vertical .responsive-video,
+    .sumo-verification-videos .responsive-video {
+        height: auto;
+        min-height: 0;
+    }
 }
