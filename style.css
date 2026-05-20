@@ -244,6 +244,103 @@ body {
     border-color: var(--accent-color);
 }
 
+.skills-storm {
+    position: relative;
+    --storm-scale: 1;
+    height: 380px;
+    max-width: 720px;
+    margin: -1rem auto 3rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    background:
+        radial-gradient(circle at center, rgba(56, 189, 248, 0.14), transparent 34%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    perspective: 900px;
+}
+
+.skills-storm::before {
+    content: "Compétences";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    background: rgba(38, 51, 70, 0.88);
+    border: 1px solid rgba(56, 189, 248, 0.28);
+    box-shadow: 0 0 28px rgba(56, 189, 248, 0.16);
+    z-index: 2;
+    animation: skillStormCore 6s ease-in-out infinite;
+}
+
+.skills-storm span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    color: var(--text-primary);
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.28);
+    font-size: 0.92rem;
+    font-weight: 700;
+    white-space: nowrap;
+    transform: translate(-50%, -50%) translate(var(--x), var(--y)) rotate(var(--r));
+    animation: skillStorm 9s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+    animation-delay: calc(var(--i) * -0.38s);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+@keyframes skillStorm {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translate(calc(var(--x) * var(--storm-scale)), calc(var(--y) * var(--storm-scale))) rotate(var(--r)) translateY(0) scale(0.72);
+        opacity: 0.42;
+    }
+
+    18% {
+        transform: translate(-50%, -50%) rotate(105deg) translate(calc(var(--x) * var(--storm-scale) * 0.55), calc(var(--y) * var(--storm-scale) * 1.2)) rotate(calc(var(--r) + 18deg)) translateY(-20px) scale(1.08);
+        opacity: 1;
+    }
+
+    42% {
+        transform: translate(-50%, -50%) rotate(216deg) translate(calc(var(--x) * var(--storm-scale) * 1.25), calc(var(--y) * var(--storm-scale) * 0.45)) rotate(calc(var(--r) - 24deg)) translateY(18px) scale(0.82);
+        opacity: 0.68;
+    }
+
+    68% {
+        transform: translate(-50%, -50%) rotate(318deg) translate(calc(var(--x) * var(--storm-scale) * 0.82), calc(var(--y) * var(--storm-scale) * 1.35)) rotate(calc(var(--r) + 36deg)) translateY(-34px) scale(1.18);
+        opacity: 0.95;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(720deg) translate(calc(var(--x) * var(--storm-scale)), calc(var(--y) * var(--storm-scale))) rotate(calc(var(--r) - 720deg)) translateY(0) scale(0.72);
+        opacity: 0.42;
+    }
+}
+
+@keyframes skillStormCore {
+    0%,
+    100% {
+        transform: rotate(-2deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(2deg) scale(1.04);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skills-storm span {
+        animation: none;
+    }
+}
+
 .skill-icon {
     width: 64px;
     height: 64px;
@@ -454,6 +551,22 @@ footer {
 
     .nav-links.nav-active {
         transform: translateX(0%);
+    }
+
+    .skills-storm {
+        --storm-scale: 0.68;
+        height: 280px;
+    }
+
+    .skills-storm span {
+        font-size: 0.78rem;
+        padding: 0.28rem 0.58rem;
+    }
+
+    .skills-storm::before {
+        width: 105px;
+        height: 105px;
+        font-size: 0.95rem;
     }
 }
 
