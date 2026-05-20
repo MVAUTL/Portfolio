@@ -91,16 +91,15 @@
                     <!-- Tabs Navigation -->
                     <div class="tabs-container">
                         <div class="tabs-nav">
-                            <button class="tab-btn active" onclick="openTab(event, 'fabrication')">Fabrication</button>
+                            <button class="tab-btn active" onclick="openTab(event, 'conception')">Conception</button>
+                            <button class="tab-btn" onclick="openTab(event, 'fabrication')">Fabrication</button>
                             <button class="tab-btn" onclick="openTab(event, 'verification')">Vérification de la conception</button>
-                            <button class="tab-btn" onclick="openTab(event, 'normes')">Normes</button>
-                            <button class="tab-btn" onclick="openTab(event, 'maintenance')">Maintenance</button>
                         </div>
 
-                        <!-- Tab: Fabrication -->
-                        <div id="fabrication" class="tab-content" style="display: block;">
+                        <!-- Tab: Conception -->
+                        <div id="conception" class="tab-content" style="display: block;">
                             <div class="tab-header">
-                                <h4>Dossier de Conception et Fabrication</h4>
+                                <h4>Dossier de Conception</h4>
                                 <a href="../../assets/images/projects/chasse-balises/B2_DDC_EQ_Feugnet_Vulliez_V1.pdf" class="download-link" download>Télécharger PDF</a>
                             </div>
                             <div class="pdf-wrapper">
@@ -108,16 +107,52 @@
                             </div>
 
                             <h4>Réalisation de l'Antenne</h4>
-                            <p>Partie dédiée à la création mécanique et électronique de l'antenne réceptrice HB9CV, taillée pour la fréquence de 144 MHz.</p>
+                            <p>Partie dédiée à la conception mécanique, électronique et radiofréquence de l'antenne réceptrice HB9CV, taillée pour la fréquence de 144 MHz.</p>
                             <div class="gallery-grid">
                                 <div class="gallery-item">
-                                    <img src="../../assets/images/projects/chasse-balises/antenne-hb9cv.jpg" alt="Antenne HB9CV" class="responsive-img">
-                                    <p class="caption">L'antenne HB9CV réalisée</p>
+                                    <img src="../../assets/images/projects/chasse-balises/DDC/Schéma simplifié de l'antenne .png" alt="Schéma simplifié de l'antenne" class="responsive-img">
+                                    <p class="caption">Schéma simplifié de l'antenne</p>
                                 </div>
                                 <div class="gallery-item">
-                                    <img src="../../assets/images/projects/chasse-balises/PXL_20260224_120504440.jpg" alt="Photo Fabrication" class="responsive-img">
-                                    <p class="caption">Phase de montage et de réglage</p>
+                                    <img src="../../assets/images/projects/chasse-balises/DDC/Architecture eletronique.png" alt="Architecture électronique" class="responsive-img">
+                                    <p class="caption">Architecture électronique</p>
                                 </div>
+                                <div class="gallery-item">
+                                    <img src="../../assets/images/projects/chasse-balises/DDC/Abaque de smith transmission.png" alt="Abaque de Smith transmission" class="responsive-img">
+                                    <p class="caption">Abaque de Smith - transmission</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../../assets/images/projects/chasse-balises/DDC/Vue 3D du rayonnement de l'antenne.png" alt="Vue 3D du rayonnement de l'antenne" class="responsive-img">
+                                    <p class="caption">Vue 3D du rayonnement de l'antenne</p>
+                                </div>
+                            </div>
+                            <div style="margin-top: 2rem; text-align: right;">
+                                <button class="btn secondary-btn" onclick="switchToTab('fabrication')">Phase Suivante :
+                                    Fabrication &rarr;</button>
+                            </div>
+                        </div>
+
+                        <!-- Tab: Fabrication -->
+                        <div id="fabrication" class="tab-content">
+                            <div class="tab-header">
+                                <h4>Fabrication de l'antenne</h4>
+                                <a href="../../assets/images/projects/chasse-balises/Fabrication/Copy of CDR_LCF_Battit.docx" class="download-link" download>Télécharger le document de vérification</a>
+                            </div>
+
+                            <p>Cette partie présente les étapes de fabrication et d'assemblage de l'antenne : réalisation de la structure, ajout des composants et ajustements matériels.</p>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="../../assets/images/projects/chasse-balises/Fabrication/PXL_20260309_114845275.jpg" alt="Fabrication de l'antenne" class="responsive-img">
+                                    <p class="caption">Fabrication de l'antenne</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../../assets/images/projects/chasse-balises/Fabrication/Ajout condensateur.png" alt="Ajout du condensateur" class="responsive-img">
+                                    <p class="caption">Ajout du condensateur</p>
+                                </div>
+                            </div>
+                            <div style="margin-top: 2rem; text-align: right;">
+                                <button class="btn secondary-btn" onclick="switchToTab('verification')">Phase Suivante :
+                                    Vérification &rarr;</button>
                             </div>
                         </div>
 
@@ -135,27 +170,41 @@
                             <p>Phase de tests et validation des choix de conception, vérification du bon fonctionnement de la réception du signal à 144 MHz lors de la recherche des balises réelles.</p>
                             <div class="gallery-grid">
                                 <div class="gallery-item">
-                                    <img src="../../assets/images/projects/chasse-balises/PXL_20260224_120515057.jpg" alt="Photo Vérification" class="responsive-img">
-                                    <p class="caption">Utilisation de l'antenne sur le campus</p>
+                                    <img src="../../assets/images/projects/chasse-balises/DDV/mesure_masse_antenne.jpg" alt="Mesure de la masse de l'antenne" class="responsive-img">
+                                    <p class="caption">Mesure de la masse de l'antenne</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../../assets/images/projects/chasse-balises/DDV/diagramme de rayonnement sur uSimmics.png" alt="Diagramme de rayonnement sur uSimmics" class="responsive-img">
+                                    <p class="caption">Diagramme de rayonnement sur uSimmics</p>
                                 </div>
                             </div>
+                            <div style="margin-top: 2rem; text-align: left;">
+                                <button class="btn secondary-btn" onclick="switchToTab('fabrication')">&larr; Retour :
+                                    Fabrication</button>
+                            </div>
                         </div>
 
-                        <!-- Tab: Normes -->
-                        <div id="normes" class="tab-content">
-                            <div class="tab-header">
-                                <h4>Normes</h4>
-                            </div>
-                            <p>Respect des normes en vigueur concernant l'émission et la réception sur la bande de fréquence, ainsi que des standards de fabrication et de sécurité.</p>
-                        </div>
+                    </div>
+                </div>
+            </div>
 
-                        <!-- Tab: Maintenance -->
-                        <div id="maintenance" class="tab-content">
-                            <div class="tab-header">
-                                <h4>Maintenance</h4>
-                            </div>
-                            <p>Procédure d'entretien de l'antenne, ajustements de réglages de fréquence, et réparation des composants après notre marche sur le terrain.</p>
-                        </div>
+            <div style="margin-top: 3rem;">
+                <h3 style="text-align: center; margin-bottom: 1rem;">Balises trouvées lors de la chasse</h3>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
+                    Quelques images prises pendant la recherche des balises sur le terrain.
+                </p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../../assets/images/projects/chasse-balises/Image_Balises.jpg" alt="Balises utilisées pendant la chasse" class="responsive-img">
+                        <p class="caption">Balises utilisées pendant la chasse</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/projects/chasse-balises/image de la balise 3 trouver.jpg" alt="Balise 3 trouvée" class="responsive-img">
+                        <p class="caption">Balise 3 trouvée</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/projects/chasse-balises/image de la balise 5 trouver.jpg" alt="Balise 5 trouvée" class="responsive-img">
+                        <p class="caption">Balise 5 trouvée</p>
                     </div>
                 </div>
             </div>
