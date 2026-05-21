@@ -212,6 +212,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize animation if canvas exists
     new HeroAnimation();
+
+    // RoboCup 2026 Toast Logic
+    const robocupToast = document.getElementById('robocupToast');
+    const closeToastBtn = document.getElementById('closeToastBtn');
+    const dismissToastBtn = document.getElementById('dismissToastBtn');
+
+    if (robocupToast && closeToastBtn && dismissToastBtn) {
+        const isToastDismissed = localStorage.getItem('robocup_2026_toast_seen');
+        
+        if (!isToastDismissed) {
+            const showToast = () => {
+                if (!robocupToast.classList.contains('active')) {
+                    robocupToast.classList.add('active');
+                    robocupToast.setAttribute('aria-hidden', 'false');
+                }
+            };
+
+            const closeToast = () => {
+                robocupToast.classList.remove('active');
+                robocupToast.setAttribute('aria-hidden', 'true');
+                localStorage.setItem('robocup_2026_toast_seen', 'true');
+            };
+
+            // Determine if we are on the homepage by checking for specific sections
+            const projectsSection = document.getElementById('projects');
+            const activitiesSection = document.getElementById('activities');
+
+            if (projectsSection || activitiesSection) {
+                // Homepage scroll-trigger logic using IntersectionObserver
+                const triggerOptions = {
+                    threshold: 0.15 // trigger when 15% of the section is visible
+                };
+
+                const triggerObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            showToast();
+                            triggerObserver.disconnect(); // Only trigger once
+                        }
+                    });
+                }, triggerOptions);
+
+                if (projectsSection) triggerObserver.observe(projectsSection);
+                if (activitiesSection) triggerObserver.observe(activitiesSection);
+            } else {
+                // Inner pages auto-show logic with a slight delay
+                setTimeout(showToast, 1800);
+            }
+
+            // Event listeners for closing
+            closeToastBtn.addEventListener('click', closeToast);
+            dismissToastBtn.addEventListener('click', closeToast);
+
+            // Close on Escape key press
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && robocupToast.classList.contains('active')) {
+                    closeToast();
+                }
+            });
+        }
+    }
 });
 
 // Tab Switching Logic (Global Scope)
