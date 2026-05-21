@@ -273,6 +273,30 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    // Skills Storm Toggle (Pause/Organize) Logic
+    const toggleStormBtn = document.getElementById('toggleStormBtn');
+    const skillsStorm = document.querySelector('.skills-storm');
+
+    if (toggleStormBtn && skillsStorm) {
+        toggleStormBtn.addEventListener('click', () => {
+            const isOrganized = skillsStorm.classList.toggle('organized');
+            const icon = toggleStormBtn.querySelector('.btn-icon');
+            const text = toggleStormBtn.querySelector('.btn-text');
+            
+            if (isOrganized) {
+                if (icon) icon.textContent = '🌪️';
+                if (text) text.textContent = 'Lancer la tempête';
+                toggleStormBtn.setAttribute('aria-label', 'Lancer la tempête');
+                toggleStormBtn.classList.add('active');
+            } else {
+                if (icon) icon.textContent = '⏸️';
+                if (text) text.textContent = 'Ranger les compétences';
+                toggleStormBtn.setAttribute('aria-label', 'Ranger les compétences');
+                toggleStormBtn.classList.remove('active');
+            }
+        });
+    }
 });
 
 // Tab Switching Logic (Global Scope)

@@ -1071,3 +1071,89 @@ footer {
         width: calc(100vw - 30px);
     }
 }
+
+/* Skills Storm Toggle Button & Organized Layout */
+.storm-toggle-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 8px;
+    color: var(--text-primary);
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.storm-toggle-btn:hover {
+    background: rgba(56, 189, 248, 0.15);
+    border-color: var(--accent-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+}
+
+.storm-toggle-btn.active {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: var(--accent-color);
+}
+
+.skills-storm.organized {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 0.65rem;
+    padding: 4.5rem 1.5rem 2rem 1.5rem;
+    height: auto;
+    min-height: clamp(300px, 38vw, 430px);
+    overflow-y: auto;
+    perspective: none;
+}
+
+.skills-storm.organized span,
+.skills-storm.organized .storm-gust-word {
+    position: static !important;
+    transform: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transition: all 0.3s ease;
+    background: rgba(56, 189, 248, 0.15);
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.skills-storm.organized span:hover,
+.skills-storm.organized .storm-gust-word:hover {
+    transform: translateY(-2px) !important;
+    background: rgba(56, 189, 248, 0.25) !important;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 6px 15px rgba(56, 189, 248, 0.25);
+}
+
+.skills-storm.organized::before,
+.skills-storm.organized::after {
+    opacity: 0.12;
+    animation: none !important;
+}
+
+@media (max-width: 480px) {
+    .storm-toggle-btn .btn-text {
+        display: none;
+    }
+    .storm-toggle-btn {
+        padding: 0.4rem;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        justify-content: center;
+    }
+}
