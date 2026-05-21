@@ -1074,36 +1074,34 @@ footer {
 
 /* Skills Storm Toggle Button & Organized Layout */
 .storm-toggle-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    z-index: 10;
-    background: rgba(15, 23, 42, 0.65);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(30, 41, 59, 0.7);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    border-radius: 8px;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 20px; /* Rounded pill style looks extremely professional */
     color: var(--text-primary);
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.88rem;
     font-weight: 600;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 6px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .storm-toggle-btn:hover {
-    background: rgba(56, 189, 248, 0.15);
+    background: rgba(56, 189, 248, 0.18);
     border-color: var(--accent-color);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.25);
 }
 
 .storm-toggle-btn.active {
-    background: rgba(56, 189, 248, 0.2);
+    background: rgba(56, 189, 248, 0.25);
     border-color: var(--accent-color);
+    box-shadow: inset 0 0 10px rgba(56, 189, 248, 0.2);
 }
 
 .skills-storm.organized {
@@ -1112,7 +1110,7 @@ footer {
     justify-content: center;
     align-content: center;
     gap: 0.65rem;
-    padding: 4.5rem 1.5rem 2rem 1.5rem;
+    padding: 2.5rem 1.5rem;
     height: auto;
     min-height: clamp(300px, 38vw, 430px);
     overflow-y: auto;
@@ -1143,17 +1141,4 @@ footer {
 .skills-storm.organized::after {
     opacity: 0.12;
     animation: none !important;
-}
-
-@media (max-width: 480px) {
-    .storm-toggle-btn .btn-text {
-        display: none;
-    }
-    .storm-toggle-btn {
-        padding: 0.4rem;
-        border-radius: 50%;
-        width: 32px;
-        height: 32px;
-        justify-content: center;
-    }
 }
