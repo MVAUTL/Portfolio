@@ -297,6 +297,44 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Activity Carousel Logic
+    document.querySelectorAll('.activity-carousel').forEach((carousel) => {
+        const slides = Array.from(carousel.querySelectorAll('.activity-carousel-slide'));
+        const prevBtn = carousel.querySelector('.activity-carousel-prev');
+        const nextBtn = carousel.querySelector('.activity-carousel-next');
+        const dotsContainer = carousel.querySelector('.activity-carousel-dots');
+
+        if (!slides.length || !prevBtn || !nextBtn || !dotsContainer) return;
+
+        let activeIndex = slides.findIndex((slide) => slide.classList.contains('active'));
+        if (activeIndex < 0) activeIndex = 0;
+
+        const dots = slides.map((_, index) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'activity-carousel-dot';
+            dot.setAttribute('aria-label', `Voir l'image ${index + 1}`);
+            dot.addEventListener('click', () => showSlide(index));
+            dotsContainer.appendChild(dot);
+            return dot;
+        });
+
+        function showSlide(index) {
+            activeIndex = (index + slides.length) % slides.length;
+            slides.forEach((slide, slideIndex) => {
+                slide.classList.toggle('active', slideIndex === activeIndex);
+            });
+            dots.forEach((dot, dotIndex) => {
+                dot.classList.toggle('active', dotIndex === activeIndex);
+                dot.setAttribute('aria-current', dotIndex === activeIndex ? 'true' : 'false');
+            });
+        }
+
+        prevBtn.addEventListener('click', () => showSlide(activeIndex - 1));
+        nextBtn.addEventListener('click', () => showSlide(activeIndex + 1));
+        showSlide(activeIndex);
+    });
 });
 
 // Tab Switching Logic (Global Scope)
